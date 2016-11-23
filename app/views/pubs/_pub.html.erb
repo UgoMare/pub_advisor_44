@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-sm-4">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= pub.image %>');">
+    <div class="card-category">Popular</div>
+    <div class="card-description">
+      <h2><%= pub.name %></h2>
+      <p><%= pub.location %></p>
+    </div>
+    <!-- <img class="card-user avatar" src="user.jpg"> -->
+    <a class="card-link" href="<%= pub_path(pub) %>" ></a>
+  </div>
+</div>
