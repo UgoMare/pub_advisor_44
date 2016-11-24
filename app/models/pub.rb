@@ -3,7 +3,7 @@ class Pub < ApplicationRecord
   validates :location, presence: true
   validates :image, presence: true
 
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
   def average
     stars = self.reviews.sum(:stars)

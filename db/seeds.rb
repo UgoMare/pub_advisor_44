@@ -14,5 +14,8 @@ doc.search('.feature-item').each do |pub|
   location = pub.search('.icon_pin')[0].text.strip
   image = pub.search('img')[0].attr('src')
 
-  Pub.create(name: name, location: location, image: image)
+  pub = Pub.create(name: name, location: location, image: image)
+  rand(15).times do
+    pub.reviews.create!(content: Faker::Hipster.sentences.join, stars: rand(5) + 1)
+  end
 end
